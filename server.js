@@ -15,5 +15,8 @@ ws.on('message', function(data, flags) {
 
 var http = require('http');
  
- http.createServer(function (request, response) {res.writeHead(200);
-  res.end("nothing to do here");}).listen(process.env.PORT);
+ http.createServer(function (request, response) {
+   console.log(request.url);
+   res.writeHead(200);
+  res.end("nothing to do here");
+}).listen(process.env.PORT);
