@@ -17,6 +17,6 @@ var http = require('http');
  
  http.createServer(function (request, response) {
    console.log(request.url);
-   res.writeHead(200);
-  res.end("nothing to do here");
+   response.writeHead(200);
+  response.end("nothing to do here");
 }).listen(process.env.PORT);
